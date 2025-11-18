@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="chatbox">
+    <h2> chat por voz</h2>
+    <button onclick="ouvir()">Falar Agora</button>
+  </div>
+  <script>
+    const reposta= "Estou Ótimo! Fico feliz por se preocupar.";
+    function falar(texto) {
+        const discurso = new SpeechSynthesisUtterance(texto);
+
+        discurso.lang = "pt-BR";
+
+        discurso.rate = 1;
+
+        window.speechSynthesis.speak(discurso);
+
+        function ouvir(){
+            const reconhecer = new webkitSpeechRecognition();
+           
+            reconhecer.lang = "pt-BR";
+
+            reconhecer.star();
+
+            reconhecer.onresult = function(event){
+
+                const textofalado = event.results[0][0].transcript.toLowerCase();
+
+                if(textoFalado.includes(pergunta)){
+
+                    falar(resposta);
+                }   else {
+
+                    falar("Desculpe, eu só entendo a pergunta: Como você está?");
+                }
+            };
+
+
+        }
+
+      } 
+      </script>
+      </body>
+      </html>
