@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot da Enfermagem</title>
+  <style>
+    .container { max-width: 600px; margin: auto; }
+    #chat { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: auto; }
+    .mensagem-user { color: blue; }
+    .mensagem-bot { color: green; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Chatbot da Enfermagem</h2>
+
+    <input id="campoMensagem" placeholder="Digite a mensagem aqui">
+
+    <button onclick="enviarMensagem()">Enviar</button>
+    <button onclick="limparChat()">Limpar chat</button>
+    <button onclick="aumentarFonte()">A+</button>
+    <button onclick="diminuirFonte()">A-</button>
+
+
+    <div id="chat"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
